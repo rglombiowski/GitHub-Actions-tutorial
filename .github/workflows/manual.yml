@@ -18,4 +18,11 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send echo
-      run: echo /etc/os_release
+      run: echo "Sending echo from first job"
+      
+  perform_pylint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Performing pylint
+      run: echo "Performing pylint in parallel to sending echo."
+      
